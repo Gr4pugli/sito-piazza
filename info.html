@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info – Le Piazze del Duomo in Sicilia</title>
+<meta name="description" content="Informazioni sul progetto Le Piazze del Duomo in Sicilia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">Le Piazze del Duomo<br>in Sicilia</a>
+    <button class="burger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="piazze.html">Piazze</a>
+      <a href="info.html" class="attivo">Info</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero hero--info">
+  <div class="hero__img"><img class="foto" src="img/homepiazze:.png.png" alt=""></div>
+  <div class="hero__content">
+      <span class="hero__tag">INFO</span>
+      <h1>Informazioni<br>sul progetto</h1>
+      <p class="hero__sub">Un archivio digitale dedicato alle piazze del duomo dei capoluoghi siciliani: luoghi simbolo della vita urbana, della storia e dell’identità dell’isola.</p>
+  </div>
+</section>
+
+<section class="info-sez info-sez--chiara">
+  <div class="info-sez__inner">
+    <div>
+      <span class="num">01</span>
+      <h2>Il concept</h2>
+      <p>Il progetto nasce con l’obiettivo di valorizzare e raccontare le piazze del duomo dei nove capoluoghi siciliani attraverso un’esperienza digitale elegante, chiara e coinvolgente.</p>
+      <p>Le piazze sono osservate come spazi pubblici che uniscono dimensione urbana, storica e religiosa, e rappresentano il cuore pulsante delle città.</p>
+    </div>
+    <!-- FOTO: img/info-concept.jpg -->
+    <div class="info-sez__img"><img class="foto" src="img/info1.png" alt="Vista aerea di una piazza del Duomo"></div>
+  </div>
+</section>
+
+<section class="info-sez info-sez--media">
+  <div class="info-sez__inner">
+    <div>
+      <span class="num">02</span>
+      <h2>Criteri di selezione</h2>
+      <p>Le piazze sono state selezionate in base a criteri che ne garantiscono il valore storico, culturale e urbano.</p>
+    </div>
+    <div class="criteri">
+      <div class="criterio"><img src="icons/cattedrale.svg" alt=""><h3>Presenza della Cattedrale</h3><p>La piazza deve essere strettamente legata alla presenza del Duomo.</p></div>
+      <div class="criterio"><img src="icons/colonna.svg" alt=""><h3>Centralità urbana</h3><p>La piazza rappresenta uno spazio pubblico principale nella vita della città.</p></div>
+      <div class="criterio"><img src="icons/chiesa.svg" alt=""><h3>Rilevanza storica e culturale</h3><p>La piazza possiede un valore storico, artistico simbolico riconosciuto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="info-sez info-sez--chiara info-sez--ultima">
+  <div class="info-sez__inner" style="align-items:start">
+    <div>
+      <span class="num">03</span>
+      <h2>Struttura del sito</h2>
+      <p>Il sito è organizzato per offrire un percorso di navigazione semplice e intuitivo.</p>
+    </div>
+    <div class="struttura">
+      <a href="index.html" class="step"><div class="cerchio"><img src="icons/home.svg" alt=""></div><h3>Home</h3><p>Introduzione al progetto e panoramica delle piazze in evidenza.</p></a>
+      <svg class="step__freccia" viewBox="0 0 66 12" fill="none" stroke="#C8A76A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h63M58 1l6 5-6 5"/></svg>
+      <a href="piazze.html" class="step"><div class="cerchio"><img src="icons/griglia.svg" alt=""></div><h3>Piazze</h3><p>Archivio completo delle piazze (principali e secondarie).</p></a>
+      <svg class="step__freccia" viewBox="0 0 66 12" fill="none" stroke="#C8A76A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h63M58 1l6 5-6 5"/></svg>
+      <a href="catania.html" class="step"><div class="cerchio"><img src="icons/dettaglio.svg" alt=""></div><h3>Dettaglio piazza</h3><p>Approfondimento di ogni piazza con storie, elementi importanti, immagini e curiosità.</p></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="footer__tit">Esplora il sito</p>
+  <nav class="footer__nav">
+    <a href="index.html">Home</a>
+    <a href="piazze.html">Piazze</a>
+    <a href="info.html">Info</a>
+  </nav>
+  <hr class="footer__hr">
+  <div class="footer__bottom">
+    <a href="index.html" class="logo">Le Piazze del Duomo<br>in Sicilia</a>
+    <div class="social">
+      Seguici su:<br>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="#" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('aperto');
+    burger.classList.toggle('aperto', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
